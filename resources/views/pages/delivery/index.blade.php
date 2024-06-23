@@ -13,7 +13,7 @@
             <div class="section-header">
                 <h1>Deliveries</h1>
                 <div class="section-header-button">
-                    <a href="{{ route('deliveries.create') }}" class="btn btn-primary">Add New Delivery</a>
+                    <a href="{{ route('delivery.create') }}" class="btn btn-primary">Add New Delivery</a>
                 </div>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
@@ -32,7 +32,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="float-right">
-                                    <form method="GET" action="{{ route('deliveries.index') }}">
+                                    <form method="GET" action="{{ route('delivery.index') }}">
                                         <div class="input-group">
                                             <input type="text" class="form-control" placeholder="Search" name="delivery_address">
                                             <div class="input-group-append">

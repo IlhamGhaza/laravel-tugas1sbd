@@ -13,7 +13,7 @@ class FlowerController extends Controller
     public function index()
     {
         //search by name, pagination 10
-        $flower_arrangements = flower_arrangements::where('type', 'like', '%' . request('type') . '%')
+        $flower_arrangements = flower_arrangements::where('name', 'like', '%' . request('type') . '%')
         ->orderBy('arrangement_id', 'desc')
         ->paginate(10);
         return view('pages.flower.index', compact('flower_arrangements'));
@@ -84,9 +84,11 @@ class FlowerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(flower_arrangements $flower_arrangements)
+    public function destroy(flower_arrangements $flower_arrangements, $id)
     {
         //
+
+        $flower = flower_arrangements::findOrFail($id);
         $flower_arrangements->delete();
         return redirect()->route('flower.index')->with('success', 'Flower Deleted successfully');
 

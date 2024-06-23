@@ -11,7 +11,10 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = orders::all();
+        $orders = orders::where('order_date', 'like', '%' . request('date') . '%')
+        ->orderBy('order_id', 'desc', 'asc')
+        ->paginate(10);
+        // $orders = orders::all();
         return view('pages.order.index', compact('orders'));
     }
 

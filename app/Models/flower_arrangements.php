@@ -12,7 +12,7 @@ class flower_arrangements extends Model
 {
     use HasFactory;
     protected $primaryKey = 'arrangement_id';
-    protected $fillable = ['type', 'description','size', 'price'];
+    protected $fillable = ['name','type', 'description','size', 'price'];
 
     public function orderDetails()
     {

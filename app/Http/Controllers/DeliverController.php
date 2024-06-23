@@ -14,7 +14,7 @@ class DeliverController extends Controller
     {
        //search by name, pagination 10
 
-       $deliveries = deliveries::where('name', 'like', '%' . request('name') . '%')
+       $deliveries = deliveries::where('delivery_date', 'like', '%' . request('delivery_date') . '%')
         ->orderBy('delivery_id', 'desc')
         ->paginate(10);
         return view('pages.delivery.index', compact('deliveries'));
@@ -28,7 +28,7 @@ class DeliverController extends Controller
     public function store(Request $request)
     {
         $delivery = deliveries::create($request->all());
-        return redirect()->route('deliveries.index');
+        return redirect()->route('delivery.index');
     }
 
     public function show($id)
@@ -47,13 +47,13 @@ class DeliverController extends Controller
     {
         $delivery = deliveries::findOrFail($id);
         $delivery->update($request->all());
-        return redirect()->route('deliveries.index');
+        return redirect()->route('delivery.index');
     }
 
     public function destroy($id)
     {
         $delivery = deliveries::findOrFail($id);
         $delivery->delete();
-        return redirect()->route('deliveries.index');
+        return redirect()->route('delivery.index');
     }
 }

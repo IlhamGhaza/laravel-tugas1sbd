@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('flower_arrangements', function (Blueprint $table) {
             $table->id('arrangement_id');
+            $table->string('name');
             $table->string('type');
             $table->string('description');
             $table->string('size');

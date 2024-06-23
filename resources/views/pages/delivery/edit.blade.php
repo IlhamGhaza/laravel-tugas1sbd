@@ -24,7 +24,7 @@
             <div class="section-body">
                 <h2 class="section-title">Edit Delivery Details</h2>
                 <div class="card">
-                    <form action="{{ route('deliveries.update', $delivery) }}" method="POST">
+                    <form action="{{ route('delivery.update', $delivery) }}" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="card-header">

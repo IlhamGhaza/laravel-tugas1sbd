@@ -10,7 +10,10 @@ class PaymentController extends Controller
 {
     public function index()
     {
-        $payments = payments::all();
+        $payments = payments::where('payment_date', 'like', '%' . request('date') . '%')
+        ->orderBy('payment_id', 'desc')
+        ->paginate(10);
+        // $payments = payments::all();
         return view('pages.payment.index', compact('payments'));
     }
 

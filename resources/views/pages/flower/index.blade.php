@@ -64,7 +64,7 @@
                                 <div class="table-responsive">
                                     <table class="table-striped table">
                                         <tr>
-
+                                            <th>Nama</th>
                                             <th>Tipe</th>
                                             <th>Deskripsi</th>
                                             <th>ukuran</th>
@@ -73,7 +73,7 @@
                                         </tr>
                                         @foreach ($flower_arrangements as $flower)
                                             <tr>
-
+                                                <td>{{ $flower->name }}</td>
                                                 <td>{{ $flower->type }}</td>
                                                 <td>{{ $flower->description }}</td>
                                                 <td>{{ $flower->size }}</td>

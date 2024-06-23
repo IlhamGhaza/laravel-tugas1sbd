@@ -32,7 +32,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="float-right">
-                                    <form method="GET" action="{{ route('orders.index') }}">
+                                    <form method="GET" action="{{ route('order.index') }}">
                                         <div class="input-group">
                                             <input type="text" class="form-control" placeholder="Search" name="order_number">
                                             <div class="input-group-append">

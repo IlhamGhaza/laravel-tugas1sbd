@@ -24,7 +24,7 @@
             <div class="section-body">
                 <h2 class="section-title">Create a New Delivery</h2>
                 <div class="card">
-                    <form action="{{ route('deliveries.store') }}" method="POST">
+                    <form action="{{ route('delivery.store') }}" method="POST">
                         @csrf
                         <div class="card-header">
                             <h4>Delivery Information</h4>
