@@ -10,7 +10,7 @@ class orders extends Model
     use HasFactory;
 
     protected $primaryKey = 'order_id';
-    protected $fillable = ['order_date', 'total_price', 'discount', 'customer_id'];
+    protected $fillable = ['order_date', 'total_price', 'discount', 'customer_id','courier_id'];
 
     public function customer()
     {
@@ -30,5 +30,10 @@ class orders extends Model
     public function payment()
     {
         return $this->hasOne(payments::class, 'order_id');
+    }
+
+    public function courier()
+    {
+        return $this->belongsTo(Courier::class, 'courier_id');
     }
 }
