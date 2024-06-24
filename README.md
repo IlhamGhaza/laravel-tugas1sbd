@@ -22,7 +22,7 @@ This project is an implementation of the first Database Systems (SBD) assignment
 
 The database schema for this project is visualized in the following diagram:
 ![Database Schema](public/database-schema.png)
-For a detailed view and interaction with the schema, please refer to the [DrawSQL diagram]([link_ke_gambar_diagram_di_drawsql](https://drawsql.app/teams/dreamer-3/diagrams/tugas-sbd2)).
+For a detailed view and interaction with the schema, please refer to the [DrawSQL diagram](https://drawsql.app/teams/dreamer-3/diagrams/tugas-sbd2).
 
 ## About Laravel
 
