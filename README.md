@@ -16,7 +16,7 @@
 
 Proyek ini adalah implementasi dari tugas pertama Sistem Basis Data (SBD) menggunakan Laravel. Untuk detail lebih lanjut tentang kasus yang diangkat dalam tugas ini, silakan lihat [contoh kasus](contohkasus.md).
 
-This project is an implementation of the first Database Systems (SBD) assignment using Laravel. For more details about the case study, please refer to [contoh kasus](contohkasus.md).
+This project is an implementation of the first Database Systems (SBD) assignment using Laravel. For more details about the case study, please refer to [case example](contohkasus.md).
 
 ## Database Schema
 
