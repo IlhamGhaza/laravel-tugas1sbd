@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Customers;  // Ensure the model is imported correctly
@@ -31,8 +30,15 @@ class CustomerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request ,Customers $customer)
+    public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'address' => 'required|string',
+            'phone' => 'nullable|string|max:20',
+            'status' => 'required|in:Regular,Non-Regular',
+        ]);
+
         $customer = new Customers;
         $customer->name = $request->name;
         $customer->address = $request->address;
@@ -41,7 +47,7 @@ class CustomerController extends Controller
 
         $customer->save();
 
-        return redirect()->route('customer.index')->with('success', 'Customer data successfully updated');
+        return redirect()->route('customer.index')->with('success', 'Customer data successfully created');
     }
 
     /**
@@ -67,10 +73,10 @@ class CustomerController extends Controller
     {
         //validate
         $request->validate([
-            'name' => 'required',
-            'address' => 'required',
-            'phone' => 'required',
-            'status' => 'required',
+            'name' => 'required|string|max:255',
+            'address' => 'required|string',
+            'phone' => 'nullable|string|max:20',
+            'status' => 'required|in:Regular,Non-Regular',
         ]);
 
         $customer = Customers::find($id);

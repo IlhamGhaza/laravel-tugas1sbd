@@ -9,6 +9,8 @@ use App\Http\Controllers\FlowerController;
 use App\Http\Controllers\OrderDetailController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CourierController;
+
 
 Route::get('/', function () {
     return view('pages.auth.login');
@@ -27,5 +29,6 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('orderdetail', OrderDetailController::class);
     Route::resource('payment', PaymentController::class);
     Route::resource('order', OrderController::class);
-
+    
+    Route::resource('courier', CourierController::class);
 });

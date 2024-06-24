@@ -63,13 +63,13 @@
                         </li>
 
                     </ul>
-                   {{-- <ul class="dropdown-menu">
+                   <ul class="dropdown-menu">
                         <li class=''>
                             <a class="nav-link" href="
-                            {{ route('supplier.index') }}
-                            ">Suplier</a>
+                            {{ route('courier.index') }}
+                            ">Kurir</a>
                         </li>
-                    </ul> --}}
+                    </ul>
                 </li>
             </ul>
 
