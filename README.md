@@ -1,12 +1,28 @@
 # Laravel-tugas1sbd
 
+## Table of Contents
+
+- [Laravel-tugas1sbd](#laravel-tugas1sbd)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Database Schema](#database-schema)
+  - [About Laravel](#about-laravel)
+  - [Installation](#installation)
+  - [Features](#features)
+  - [Contribution](#contribution)
+  - [License](#license)
+  
 ## Description
 
 Proyek ini adalah implementasi dari tugas pertama Sistem Basis Data (SBD) menggunakan Laravel. Untuk detail lebih lanjut tentang kasus yang diangkat dalam tugas ini, silakan lihat [contoh kasus](contohkasus.md).
 
 This project is an implementation of the first Database Systems (SBD) assignment using Laravel. For more details about the case study, please refer to [contoh kasus](contohkasus.md).
 
-Stisla template
+## Database Schema
+
+The database schema for this project is visualized in the following diagram:
+![Database Schema](public/database-schema.png)
+For a detailed view and interaction with the schema, please refer to the [DrawSQL diagram]([link_ke_gambar_diagram_di_drawsql](https://drawsql.app/teams/dreamer-3/diagrams/tugas-sbd2)).
 
 ## About Laravel
 
@@ -17,7 +33,7 @@ Laravel is a PHP framework that is elegant and expressive, designed to make web 
 1. Clone this repository to your local machine.
 
     ```bash
-    git clone https://github.com/username/Laravel-tugas1sbd.git
+    git clone https://github.com/IlhamGhaza/Laravel-tugas1sbd.git
     ```
 
 2. Navigate to the project directory.
@@ -70,4 +86,4 @@ If you wish to contribute to this project, please fork this repository and submi
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](lisence.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LISENCE.md) file for details.
