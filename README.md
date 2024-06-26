@@ -86,4 +86,5 @@ If you wish to contribute to this project, please fork this repository and submi
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LISENCE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LISENCE.md) file for details![GitHub License](https://img.shields.io/github/license/IlhamGhaza/laravel-tugas1sbd)
+
