@@ -4,18 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class courier extends Model
+class Courier extends Model
 {
-    use HasFactory;
-
+    use HasFactory, SoftDeletes;
     protected $primaryKey = 'courier_id';
-    protected $fillable = ['name', 'contact'];
-
-    public function orders()
-    {
-        return $this->hasMany(orders::class, 'courier_id');
-    }
+    protected $fillable = ['name', 'phone'];
 }
-
-
