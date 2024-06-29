@@ -13,12 +13,16 @@ return new class extends Migration
     {
         Schema::create('order_details', function (Blueprint $table) {
             $table->id('detail_id');
-            $table->foreignId('order_id')->constrained('orders', 'order_id');
-            $table->foreignId('arrangement_id')->constrained('flower_arrangements', 'arrangement_id');
+            $table->unsignedBigInteger('order_id');
+            $table->unsignedBigInteger('arrangement_id');
             $table->integer('quantity');
-            $table->decimal('unit_price', 10, 2);
-            $table->decimal('subtotal', 10, 2);
+            $table->decimal('unit_price', 8, 2);
+            $table->decimal('sub_total', 8, 2);
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->foreign('order_id')->references('order_id')->on('orders');
+            $table->foreign('arrangement_id')->references('arrangement_id')->on('flower_arrangements');
         });
     }
 
